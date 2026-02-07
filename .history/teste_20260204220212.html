@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card com Linha Decorativa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .card-container {
+            width: 100%;
+            max-width: 350px;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #f0f0f0;
+            border-radius: 16px 16px 16px 160;
+            display: block;
+        }
+        
+        /* LINHA DECORATIVA - Opção 1: Linha simples */
+        .divider-line {
+            height: 2px;
+            background: linear-gradient(90deg, #4a6ee0, #3a5bd0, #4a6ee0);
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            top: -1px;
+        }
+        
+        .card-content {
+            padding: 24px;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .card-text {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 28px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        .card-button {
+            display: block;
+            width: 100%;
+            height: 52px;
+            background: linear-gradient(135deg, #4a6ee0 0%, #3a5bd0 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(74, 110, 224, 0.25);
+        }
+        
+        .card-button:hover {
+            background: linear-gradient(135deg, #3a5bd0 0%, #2a4bc0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(74, 110, 224, 0.35);
+        }
+        
+        @media (max-width: 400px) {
+            .card-container {
+                max-width: 300px;
+            }
+            
+            .card-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisagem natural" class="card-img">
+        
+        <!-- Linha decorativa entre imagem e conteúdo -->
+        <div class="divider-line"></div>
+        
+        <div class="card-content">
+            <h3 class="card-title">Consultoria Jurídica</h3>
+            <p class="card-text">
+                Obtenha orientação especializada para resolver suas questões legais. Nossa equipe está pronta para oferecer a melhor solução para seu caso.
+            </p>
+            
+            <button class="card-button" aria-label="Falar com advogado">
+                FALAR COM ADVOGADO
+            </button>
+        </div>
+    </div>
+</body>
+</html>

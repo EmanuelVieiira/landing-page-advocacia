@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte ainda*/
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0; /* Remove o padding do body */
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0; 
+}
+

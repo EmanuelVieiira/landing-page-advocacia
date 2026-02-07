@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card com Linha Elevada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .card-container {
+            width: 100%;
+            max-width: 380px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* LINHA SIMPLES COM ELEVAÇÃO NAS PONTAS - Mais sutil */
+        .simple-rising-line {
+            position: relative;
+            height: 12px;
+            width: 100%;
+            margin: 0 auto;
+            overflow: visible;
+        }
+        
+        /* Corpo principal da linha */
+        .simple-rising-line:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 60%;
+            height: 8px;
+            background: #4a6ee0;
+            border-radius: 4px;
+            box-shadow: 
+                0 3px 6px rgba(74, 110, 224, 0.3),
+                0 0 0 2px white, /* Borda branca ao redor */
+                0 0 0 4px #4a6ee0; /* Borda externa azul */
+        }
+        
+        /* Pontas elevadas */
+        .simple-rising-line:after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 100%;
+            height: 16px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                transparent 15%, 
+                #4a6ee0 15%, 
+                #4a6ee0 85%, 
+                transparent 85%, 
+                transparent 100%
+            );
+            border-radius: 8px 8px 0 0;
+            box-shadow: 
+                0 -2px 4px rgba(74, 110, 224, 0.2),
+                inset 0 1px 2px rgba(255, 255, 255, 0.5);
+            
+            /* Efeito de elevação mais pronunciado nas extremidades */
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%
+            );
+        }
+        
+        .card-content {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+        
+        .card-title {
+            font-size: 1.7rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .card-text {
+            color: #5d6d7e;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        
+        .card-button {
+            display: block;
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(135deg, #4a6ee0 0%, #3a5bd0 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(74, 110, 224, 0.3);
+        }
+        
+        .card-button:hover {
+            background: linear-gradient(135deg, #3a5bd0 0%, #2a4bc0 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 110, 224, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisagem" class="card-img">
+        
+        <!-- Linha simples com elevação -->
+        <div class="simple-rising-line"></div>
+        
+        <div class="card-content">
+            <h3 class="card-title">Consultoria Jurídica</h3>
+            <p class="card-text">
+                Obtenha orientação especializada para resolver suas questões legais. Nossa equipe está pronta para oferecer a melhor solução para seu caso.
+            </p>
+            
+            <button class="card-button" aria-label="Falar com advogado">
+                FALAR COM ADVOGADO
+            </button>
+        </div>
+    </div>
+</body>
+</html>

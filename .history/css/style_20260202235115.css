@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte ainda*/
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding: 0; 
+    overflow-x: hidden;
+}
+
+header {
+   
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    color: white;
+    padding: 37px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     background-color: #621a2b;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-width: 1200px;
+   
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 64px;
+    width: auto;
+}
+
+
+.btn-whatsapp {
+    background-color: #8B1538; /* Cor vinho */
+    color: white;
+    padding: 9px 27px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    display: flex;
+    display: none;
+    align-items: center;
+    gap: 9px;
+    transition: all 0.3s ease; 
+    font-size: 16px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #6B0F2A; /* Vinho mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* (desktop) */
+@media (min-width: 768px) {
+    .header-container {
+        justify-content: space-between; /* Separado no desktop */
+    }
+    .logo {
+        margin-left: 62px;
+    }
+    .btn-whatsapp {
+        margin-right: 50px;
+        display: flex; /* Aparece no desktop */
+    }
+}
+/* MAIN  TESTE */
+main{
+    background: #4f0609;
+background: linear-gradient(91deg,rgba(79, 6, 9, 1) 0%, rgba(98, 26, 42, 1) 51%, rgba(82, 14, 14, 1) 100%);
+
+}
+.hero {
+  padding: 60px 40px;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content:flex-end;;
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+
+  width: 472px;
+  height: 100%;
+
+  border: 2px solid rgba(139, 21, 56, 0.4);
+  border-radius: 15px;
+
+  transform: translate(-20px, 20px); /* efeito de deslocamento */
+  z-index: 1;
+}
+
+.hero-image img {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 472px;
+  height: auto;
+
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}

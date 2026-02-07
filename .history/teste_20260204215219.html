@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card com Linha Tracejada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .card-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .card-container:hover {
+            transform: translateY(-15px) scale(1.01);
+            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-img-container {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card-container:hover .card-img {
+            transform: scale(1.05);
+        }
+        
+        /* LINHA TRACEJADA MODERNA */
+        .dashed-divider {
+            height: 4px;
+            background: repeating-linear-gradient(
+                90deg,
+                #4a6ee0,
+                #4a6ee0 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            margin: 0 30px;
+            position: relative;
+            top: -2px;
+        }
+        
+        .dashed-divider:before,
+        .dashed-divider:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            background: #4a6ee0;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .dashed-divider:before {
+            left: -6px;
+        }
+        
+        .dashed-divider:after {
+            right: -6px;
+        }
+        
+        .card-content {
+            padding: 35px;
+            text-align: center;
+            background: white;
+        }
+        
+        .card-title {
+            font-size: 1.8rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4a6ee0, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-text {
+            color: #636e72;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+            text-align: center;
+        }
+        
+        .card-button {
+            display: block;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .card-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.5);
+        }
+        
+        .card-button:hover:before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a" alt="Escritório de advocacia" class="card-img">
+        </div>
+        
+        <!-- Linha tracejada moderna -->
+        <div class="dashed-divider"></div>
+        
+        <div class="card-content">
+            <h3 class="card-title">Consultoria Legal Premium</h3>
+            <p class="card-text">
+                Soluções jurídicas personalizadas para indivíduos e empresas. Nossa equipe de especialistas está preparada para defender seus interesses com excelência.
+            </p>
+            
+            <button class="card-button" aria-label="Falar com advogado">
+                📞 FALAR COM ESPECIALISTA
+            </button>
+        </div>
+    </div>
+</body>
+</html>
