@@ -1001,9 +1001,7 @@ footer {
 
 /* Mobile */
 @media (max-width: 968px) {
-    body{
-        background-color: var(--color-bg-light);
-    }
+    
     .header-container {
         z-index: 999; 
         padding: 0 20px;

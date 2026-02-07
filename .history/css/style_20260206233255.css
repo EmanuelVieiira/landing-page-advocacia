@@ -1002,7 +1002,7 @@ footer {
 /* Mobile */
 @media (max-width: 968px) {
     body{
-        background-color: var(--color-bg-light);
+        background-color: ;
     }
     .header-container {
         z-index: 999; 

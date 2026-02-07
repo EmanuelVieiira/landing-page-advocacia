@@ -999,16 +999,19 @@ footer {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* Tablet */
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+    }
+}
+
 /* Mobile */
 @media (max-width: 968px) {
-    body{
-        background-color: var(--color-bg-light);
-    }
     .header-container {
         z-index: 999; 
         padding: 0 20px;
     }
-    
     .header {
         z-index: 999;
     }
@@ -1123,6 +1126,7 @@ footer {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    
     
     .steps-grid {
         grid-template-columns: 1fr;
