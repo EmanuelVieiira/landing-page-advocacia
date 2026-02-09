@@ -1089,8 +1089,8 @@ footer .top-header-right {
         font-size: 16px;
     }
     .header-nav {
-    display: none;
-    
+    display: flex;
+    gap: 30px;
 }
     
     

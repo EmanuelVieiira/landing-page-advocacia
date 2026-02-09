@@ -1090,7 +1090,7 @@ footer .top-header-right {
     }
     .header-nav {
     display: none;
-    
+    gap: 30px;
 }
     
     
