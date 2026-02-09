@@ -57,8 +57,7 @@ html {
     display: flex;
 }
 .top-header-right {
-    justify-content: flex-end;  
-     align-items: center;
+    justify-content: flex-end;  /* Alinha à direita */
 }
 .contatos-top-header,
 .social-top {
@@ -136,14 +135,6 @@ header {
     padding: 20px 0;
 }
 
-.top-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -164,7 +155,7 @@ header {
 }
 
 .header-nav {
-    display: flex;
+    display: none;
     gap: 30px;
 }
 
@@ -897,7 +888,11 @@ header {
     box-shadow: 0 16px 40px rgba(209, 166, 107, 0.5);
 }
 
-
+.cta-subtext {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 24px;
+}
 
 /* ============================================
    FOOTER
@@ -958,9 +953,6 @@ footer {
 .footer-bottom p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
-}
-footer .top-header-right {
-    display: none;
 }
 
 /* ============================================

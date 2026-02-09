@@ -897,7 +897,11 @@ header {
     box-shadow: 0 16px 40px rgba(209, 166, 107, 0.5);
 }
 
-
+.cta-subtext {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 24px;
+}
 
 /* ============================================
    FOOTER

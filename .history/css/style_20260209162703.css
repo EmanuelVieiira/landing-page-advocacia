@@ -56,10 +56,7 @@ html {
 .top-header-right {
     display: flex;
 }
-.top-header-right {
-    justify-content: flex-end;  
-     align-items: center;
-}
+
 .contatos-top-header,
 .social-top {
     display: flex;
@@ -79,7 +76,7 @@ html {
 
 .contatos-top-header a,
 .social-top a {
-    color: var(--color-primary);
+    color: var(--color-whatsapp);
     text-decoration: none;
     transition: var(--transition);
     font-weight: 500;
@@ -136,14 +133,6 @@ header {
     padding: 20px 0;
 }
 
-.top-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -164,7 +153,7 @@ header {
 }
 
 .header-nav {
-    display: flex;
+    display: none;
     gap: 30px;
 }
 
@@ -897,7 +886,11 @@ header {
     box-shadow: 0 16px 40px rgba(209, 166, 107, 0.5);
 }
 
-
+.cta-subtext {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 24px;
+}
 
 /* ============================================
    FOOTER
@@ -959,9 +952,6 @@ footer {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
 }
-footer .top-header-right {
-    display: none;
-}
 
 /* ============================================
    WHATSAPP FLOAT BUTTON
@@ -992,7 +982,9 @@ footer .top-header-right {
     color: white;
 
 }
-
+.top-header-right{
+    display: none;
+}
 
 @keyframes pulse-float {
     0%, 100% {
