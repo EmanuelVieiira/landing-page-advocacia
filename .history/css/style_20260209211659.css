@@ -358,6 +358,7 @@ header {
     z-index: 1;
 }
 
+/* Sombra embaixo do botão */
 .btn-primary::after {
     content: "";
     position: absolute;
@@ -427,6 +428,7 @@ header {
     }
 }
 
+/* Animação de brilho */
 @keyframes shine {
     0% {
         left: -50px;
@@ -1169,6 +1171,7 @@ footer .top-header-right {
         width: 50px;
         height: 3px;
         background-color: #c9a24d;
+        /* cor dourada / destaque */
         border-radius: 2px;
     }
 

@@ -358,6 +358,7 @@ header {
     z-index: 1;
 }
 
+/* Sombra embaixo do botão */
 .btn-primary::after {
     content: "";
     position: absolute;
@@ -427,6 +428,7 @@ header {
     }
 }
 
+/* Animação de brilho */
 @keyframes shine {
     0% {
         left: -50px;
@@ -496,6 +498,9 @@ header {
     margin-top: 4px;
 }
 
+/* ============================================
+   EXPERT SECTION (NOVA SEÇÃO)
+   ============================================ */
 .expert-section {
     background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     padding: 100px 20px;
@@ -508,6 +513,7 @@ header {
 
 .expert-content {
     display: grid;
+    /*Mantém o layout em 2 colunas para desktop*/
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
@@ -763,7 +769,9 @@ header {
     color: white;
 }
 
-
+/* ============================================
+   HOW IT WORKS SECTION
+   ============================================ */
 .how-it-works {
     background: linear-gradient(135deg, var(--color-bg-light) 0%, #f0ede8 100%);
     padding: 100px 40px;
@@ -824,6 +832,9 @@ header {
     line-height: 1.6;
 }
 
+/* ============================================
+   CTA SECTION
+   ============================================ */
 .cta {
     background: linear-gradient(135deg, var(--color-primary) 0%, #4a1420 100%);
     padding: 100px 40px;
@@ -993,6 +1004,9 @@ footer .top-header-right {
     }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
 /* Mobile */
 @media (max-width: 968px) {
@@ -1031,12 +1045,12 @@ footer .top-header-right {
 
     .hero-text {
         order: 1;
-       
+        /* texto vem primeiro */
     }
 
     .hero-image {
         order: 2;
-       
+        /* imagem vem depois */
     }
 
     .hero-text h1 {
@@ -1045,6 +1059,7 @@ footer .top-header-right {
 
     .expert-content {
         grid-template-columns: 1fr;
+        /* AGORA SIM */
         gap: 40px;
     }
 
@@ -1169,6 +1184,7 @@ footer .top-header-right {
         width: 50px;
         height: 3px;
         background-color: #c9a24d;
+        /* cor dourada / destaque */
         border-radius: 2px;
     }
 
